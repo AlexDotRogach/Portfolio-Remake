@@ -1,0 +1,19 @@
+footer {
+    background: #ffa501;
+    height: 35px;
+    position: relative;
+}
+
+.footer__text {
+    font-family: 'Samsara';
+    font-size: 18px;
+    position: absolute;
+    @include center;
+}
+
+@media (max-width: 400px) {
+
+    .footer__text {
+        font-size: 30px;
+    }
+}
