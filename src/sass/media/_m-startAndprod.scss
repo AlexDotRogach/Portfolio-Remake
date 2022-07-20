@@ -1,12 +1,10 @@
 @media (max-width: 1400px) { 
     .swap__language {
-        right: 0;
-        left: 15px;
-        top: 90px;
+        left: 95px;
+        top: 20px;
     }
 }
 @media (max-width: 769px) { 
-
     .start{
         background: url('img/startBack.png') no-repeat 65%/cover black;
     }
@@ -48,7 +46,6 @@
 }
 
 @media (max-width: 640px) { 
-    
     .about__block-tools {
         display: flex;
         flex-flow: column nowrap;
@@ -78,10 +75,12 @@
         width: 15px;
         height: 15px;
     }
+    .swap__language {
+        left: 75px;
+    }
 }
 
 @media (max-width: 580px) {
-
     .start{
         background: url('img/startBack.png') no-repeat 80%/cover black;
     }
