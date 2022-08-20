@@ -518,7 +518,14 @@
                     <input name="name" class="social__input" placeholder="Name" type="text" required></input>
                     <input name="email" class="social__input" placeholder="example@gmail.com" type="email" required></input>
                     <textarea name="message" placeholder="Text" type="textarea" required></textarea>
-                    <div class="social__check"><input type="checkbox" required></input>
+                    <div class="social__check">
+                    <!-- checkbox  -->
+                    <div class="checkbox-rect">
+                        <input type="checkbox" id="checkbox-rect1" name="check" required>
+                        <label for="checkbox-rect1"></label>
+                    </div>
+                    </label>
+                    <!-- end  -->
                     <span class="social__text">я согласен(а) с </span><a href="./policy.html"><span class="social__text">политикой конфиденциальности</span></a></div>
                     <div class="social__but"><button type="submit"><span class="social__but-text">Отправить сообщение</span></button></div>
                 </form>
@@ -528,6 +535,9 @@
 
     <footer>
         <div class="footer__text">2022</div>
+        <div class="footer__wrapper-btn">
+            <img src="icons/arrow_upward.svg" class="footer__arrow-up" alt="arrow">
+        </div>
     </footer>
 </body>
 <script src="./bundle.js"></script>
