@@ -9,7 +9,11 @@
   background: orange;
   margin-top: 10px;
 }
-
+.check-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .social {
   font-family: "Prata";
   color: black;

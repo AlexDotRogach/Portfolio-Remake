@@ -26,7 +26,7 @@ function request() {
 
     createBlock(formSoc, load, statusImg[0], "loading");
 
-    fetch("../mailer/smart.php", {
+    fetch("../smart.php", {
       method: "POST",
       body: newData,
     })

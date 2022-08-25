@@ -33,6 +33,7 @@ window.addEventListener("load", () => {
   request();
   language();
 
+  // scroll top
   let topBtn = document.querySelector(".footer__wrapper-btn");
   let start = document.querySelector(".start");
 
@@ -43,4 +44,16 @@ window.addEventListener("load", () => {
       block: "start",
     });
   });
+
+  // load good back image on the start page
+  const startElement = document.querySelector(".start");
+
+  document.addEventListener("scroll", loadGoodPageStart);
+
+  function loadGoodPageStart(e) {
+    if (e.target.scrollingElement.scrollTop > startElement.clientHeight) {
+      startElement.style.background =
+        'url("img/startBack.png") no-repeat 50% / cover';
+    }
+  }
 });

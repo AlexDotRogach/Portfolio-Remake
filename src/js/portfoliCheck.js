@@ -17,7 +17,7 @@ function portfoliCheck() {
       });
 
       if (item.innerHTML == startValues[index] && oneAction == 0) {
-        const hash = window.location.hash.substr(1);
+        const hash = window.location.hash.substring(1);
         const arrTextUa = ["Підтвердьте перехід на ", "Переходжу", "Ні"];
         const arrTextEn = ["Confirm the transition to ", "Go to", "No"];
         let link = item.querySelector("a").getAttribute("href");
@@ -26,9 +26,7 @@ function portfoliCheck() {
 
         item.innerHTML = "";
 
-        if (hash == "en") {
-          arrTextUse = arrTextEn;
-        }
+        if (hash == "en") arrTextUse = arrTextEn;
 
         item.innerHTML = `
                     <div class="question">
