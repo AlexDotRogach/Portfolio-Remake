@@ -1,177 +1,171 @@
-@media (max-width: 1400px) { 
-    .swap__language {
-        left: 95px;
-        top: 20px;
-    }
+@media (max-width: 1400px) {
+  .swap__language {
+    left: 95px;
+    top: 20px;
+  }
 }
-@media (max-width: 769px) { 
-    .start{
-        background: url('img/startBack.png') no-repeat 65%/cover black;
-    }
+@media (max-width: 769px) {
+  .start {
+    background: url("img/startBackBad.png") no-repeat 65% / cover black;
+  }
 }
 
 @media (max-width: 690px) {
+  .start__name {
+    font-size: 20px;
+  }
 
-    .start__name {
-        font-size: 20px;
-    }
+  .start__name::before {
+    top: 0;
+  }
 
-    .start__name::before {
-        top: 0;
-    }
+  .start__location {
+    font-size: 28px;
+  }
 
-    .start__location {
-        font-size: 28px;
-    }
+  .start__buttons button {
+    font-size: 14px;
+  }
 
-    .start__buttons button {
-        font-size: 14px;
-    }
-    
-    .swap__language {
-        width: 80px;
-        height: 40px;
-        padding: 8px;
-        background: rgba(0,0,0, .1);
+  .swap__language {
+    width: 80px;
+    height: 40px;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.1);
 
-        &-item img {
-            width: 25px;
-            height: 25px;
-        }
-        &-item:hover img {
-            width: 30px;
-            height: 30px;
-        }
+    &-item img {
+      width: 25px;
+      height: 25px;
     }
+    &-item:hover img {
+      width: 30px;
+      height: 30px;
+    }
+  }
 }
 
-@media (max-width: 640px) { 
-    .about__block-tools {
-        display: flex;
-        flex-flow: column nowrap;
-    }
+@media (max-width: 640px) {
+  .about__block-tools {
+    display: flex;
+    flex-flow: column nowrap;
+  }
 
-    .about__block-info {
-        grid-template: 1fr/ 1fr;
-    }
-    
-    .about__block-element {
-        grid-template: 45px minmax(115px,auto) / minmax(100px,auto);
-    }
+  .about__block-info {
+    grid-template: 1fr/ 1fr;
+  }
 
-    .about__block-img {
-        text-align: center;
-    }
+  .about__block-element {
+    grid-template: 45px minmax(115px, auto) / minmax(100px, auto);
+  }
 
-    .about__block-img svg{
-        margin: 10px 0 10px 0;
-    }
+  .about__block-img {
+    text-align: center;
+  }
 
-    .about__block-describe {
-        text-align: justify;
-    }
+  .about__block-img svg {
+    margin: 10px 0 10px 0;
+  }
 
-    .menu-navigation div {
-        width: 15px;
-        height: 15px;
-    }
-    .swap__language {
-        left: 75px;
-    }
+  .about__block-describe {
+    text-align: justify;
+  }
+
+  .menu-navigation div {
+    width: 15px;
+    height: 15px;
+  }
+  .swap__language {
+    left: 75px;
+  }
 }
 
 @media (max-width: 580px) {
-    .start{
-        background: url('img/startBack.png') no-repeat 80%/cover black;
-    }
+  .start {
+    background: url("img/startBackBad.png") no-repeat 80% / cover black;
+  }
 
-    .start__name::before {
-        top: -2px;
-    }
+  .start__name::before {
+    top: -2px;
+  }
 
-    .start__name {
-        font-size: 16px;
-    }
+  .start__name {
+    font-size: 16px;
+  }
 
-    .start__location {
-        font-size: 24px;
-    }
+  .start__location {
+    font-size: 24px;
+  }
 
-    .start__buttons button {
-        font-size: 12px;
-    }
+  .start__buttons button {
+    font-size: 12px;
+  }
 
-    .about__block-title {
-        margin-top: 15px;
-    }
-
+  .about__block-title {
+    margin-top: 15px;
+  }
 }
 
 @media (max-width: 510px) {
-
-    .about__block-describe {
-        text-align: left;
-    }
+  .about__block-describe {
+    text-align: left;
+  }
 }
 
 @media (max-width: 500px) {
+  .start {
+    background: url("img/startBackBad.png") no-repeat 75% / cover black;
+  }
+  .start__info {
+    max-width: 50vw;
+    left: 0;
+    transform: translate(30px, -60px);
+  }
 
-    .start {
-        background: url('img/startBack.png') no-repeat 75%/cover black;
-    }
-    .start__info {
-        max-width: 50vw;
-        left: 0;
-        transform: translate(30px,-60px);
-    }
+  .start__name {
+    font-size: 14px;
+  }
 
-    .start__name {
-        font-size: 14px;
-    }
+  .start__name::before {
+    display: none;
+  }
 
-    .start__name::before {
-        display: none;
-    }
-
-    .start__location {
-        font-size: 22px;
-    }
+  .start__location {
+    font-size: 22px;
+  }
 }
 
 @media (max-width: 450px) {
+  .start__info {
+    max-width: 50vw;
+    left: 0;
+    transform: translate(20px, -60px);
+  }
 
-    .start__info {
-        max-width: 50vw;
-        left: 0;
-        transform: translate(20px,-60px);
-    }
+  .start__buttons button {
+    display: flex;
+    flex-flow: column wrap;
+  }
 
-    .start__buttons button {
-        display: flex;
-        flex-flow: column wrap;
-    }
-
-    .start__buttons button:first-child {
-        margin-bottom: 10px;
-    }
+  .start__buttons button:first-child {
+    margin-bottom: 10px;
+  }
 }
 
 @media (max-width: 350px) {
+  .about__block-text {
+    font-size: 18px;
+    margin-top: 10px;
+  }
 
-    .about__block-text {
-        font-size: 18px;
-        margin-top: 10px;
-    }
+  .about__block-info {
+    margin: 0 20px;
+  }
 
-    .about__block-info {
-        margin: 0 20px;
-    }
+  .about__block-title {
+    font-size: 22px;
+  }
 
-    .about__block-title {
-        font-size: 22px;
-    }
-
-    .about__block-describe {
-        font-size: 16px;
-    }
+  .about__block-describe {
+    font-size: 16px;
+  }
 }

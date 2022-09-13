@@ -2,12 +2,18 @@ function animTools() {
   const skillsBlock = document.querySelectorAll(
     ".skills__block-skills .skills__block-element"
   );
-  const blockElemHeight = Math.round(
-    skillsBlock[0].getBoundingClientRect().height
-  );
 
-  let counter = 0,
+  let blockElemHeight = Math.round(
+      skillsBlock[0].getBoundingClientRect().height
+    ),
+    counter = 0,
     arr = [];
+
+  if (window.screen.height < 1200) blockElemHeight += 200;
+
+  if (window.screen.height < 900) blockElemHeight += 100;
+
+  if (window.screen.height < 700) blockElemHeight += 50;
 
   skillsBlock.forEach((item) => {
     let blockElemTop = item.getBoundingClientRect().top;

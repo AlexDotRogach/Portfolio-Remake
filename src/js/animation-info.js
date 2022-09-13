@@ -6,9 +6,12 @@ function animInfo() {
   const screenPerson = document.documentElement.clientWidth;
 
   // расстояние для срабатывания анимации
-  const distanceText =
-    text.getBoundingClientRect().top - text.getBoundingClientRect().height;
-  let arrDistanceTools = [];
+  let distanceText =
+      text.getBoundingClientRect().top - text.getBoundingClientRect().height,
+    arrDistanceTools = [],
+    adaptAnim = 0;
+
+  if (window.screen.height < 900) adaptAnim = 400;
 
   // счетчик для регулирование срабатывания по элементам
   let counter = 0;
@@ -18,6 +21,9 @@ function animInfo() {
       item.getBoundingClientRect().top - item.getBoundingClientRect().height
     );
   });
+
+  if (adaptAnim)
+    arrDistanceTools = arrDistanceTools.map((elem) => (elem -= adaptAnim));
 
   document.addEventListener("scroll", () => {
     const scroll = document.documentElement.scrollTop;

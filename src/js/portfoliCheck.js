@@ -1,4 +1,5 @@
 function portfoliCheck() {
+  const wrapItems = document.querySelector(".portfolio__items");
   const items = document.querySelectorAll(".portfolio__items .portfolio__item");
   const startValues = [];
   let oneAction = 0;
@@ -7,16 +8,19 @@ function portfoliCheck() {
     startValues.push(item.innerHTML);
   });
 
+  // После нажатию не по элементу закроет их
+  wrapItems.addEventListener("click", (e) => {
+    if (e.target.classList.contains("portfolio__items")) {
+      clearActive(items, startValues);
+    }
+  });
+
   items.forEach((item, index) => {
     item.addEventListener("click", () => {
       //Убираю активные элементы после нажатия на элемент
-      items.forEach((activeElem, elemIndex) => {
-        if (activeElem.firstElementChild.classList.contains("question")) {
-          activeElem.innerHTML = startValues[elemIndex];
-        }
-      });
+      clearActive(items, startValues);
 
-      if (item.innerHTML == startValues[index] && oneAction == 0) {
+      if (oneAction === 0) {
         const hash = window.location.hash.substring(1);
         const arrTextUa = ["Підтвердьте перехід на ", "Переходжу", "Ні"];
         const arrTextEn = ["Confirm the transition to ", "Go to", "No"];
@@ -49,6 +53,14 @@ function portfoliCheck() {
       oneAction = 0;
     });
   });
+
+  function clearActive(elements, startHtml) {
+    elements.forEach((activeElem, elemIndex) => {
+      if (activeElem.firstElementChild.classList.contains("question")) {
+        activeElem.innerHTML = startHtml[elemIndex];
+      }
+    });
+  }
 }
 
 export default portfoliCheck;
